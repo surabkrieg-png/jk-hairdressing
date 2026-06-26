@@ -3,35 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Friseur Rostock | JK Hairdressing – Dein Traumhaar in besten Händen</title>
-    <meta name="description" content="JK Hairdressing in Rostock: Expertin für Balayage, Blond & Haarverlängerung. Buche jetzt deinen Termin für strahlend schönes Haar! Wiener Platz 8, 18069 Rostock.">
-    <meta name="keywords" content="Friseur Rostock, Balayage Rostock, Blond Rostock, Haarverlängerung Rostock, Brautstyling Rostock, Friseursalon Rostock">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Friseur Rostock: JK Hairdressing – wohlfühlen & begeistern">
-    <meta property="og:description" content="Dein Friseursalon in Rostock für Balayage, Blond & Brautstyling. Buche jetzt deinen Termin!">
-    <meta property="og:url" content="https://jennifer-krieg.de">
-    <meta property="og:type" content="website">
+    <title>Friseur Rostock: JK Hairdressing – wohlfühlen & begeistern</title>
+    <meta name="description" content="Hier erwartet dich ein Ort, an dem du dich entspannen und einfach du selbst sein kannst. Genieße deine kleine Auszeit - in gemütlicher Wohlfühlatmosphäre.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#D5B781',
-                        secondary: '#0E2A3B',
-                        dark: '#04151F',
-                        cream: '#F9F5EE',
+                        'gold': '#D5B781',
+                        'navy': '#0E2A3B',
+                        'dark': '#04151F',
+                        'cream': '#F9F5EE',
+                        'red-10': '#8B0000'
                     },
                     fontFamily: {
-                        serif: ['Noto Serif JP', 'serif'],
+                        'serif': ['"Noto Serif JP"', 'serif'],
+                        'sans': ['Roboto', 'sans-serif']
                     }
                 }
             }
@@ -39,86 +34,127 @@
     </script>
     
     <style>
-        .fade-in { animation: fadeIn 1s ease-in; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .slide-in-left { animation: slideInLeft 0.8s ease-out; }
-        @keyframes slideInLeft { from { opacity: 0; transform: translateX(-50px); } to { opacity: 1; transform: translateX(0); } }
-        .slide-in-right { animation: slideInRight 0.8s ease-out; }
-        @keyframes slideInRight { from { opacity: 0; transform: translateX(50px); } to { opacity: 1; transform: translateX(0); } }
+        body { font-family: 'Noto Serif JP', serif; }
+        .font-sans { font-family: 'Roboto', sans-serif; }
+        .elementor-heading-title { font-weight: 600; }
+        .fade-in-up { animation: fadeInUp 1s ease-out; }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
-<body class="font-serif text-dark bg-cream">
+<body class="bg-cream text-dark">
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-cream/95 backdrop-blur-sm border-b border-primary/20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <div class="flex items-center">
-                    <a href="#" class="text-2xl font-semibold text-secondary">JK Hairdressing</a>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#aboutme" class="text-dark hover:text-primary transition">About me</a>
-                    <a href="#leistungen" class="text-dark hover:text-primary transition">Leistungen</a>
-                    <a href="#preise" class="text-dark hover:text-primary transition">Preise</a>
-                    <a href="#galerie" class="text-dark hover:text-primary transition">Galerie</a>
-                    <a href="#kontakt" class="text-dark hover:text-primary transition">Kontakt</a>
-                    <a href="/blog/" class="text-dark hover:text-primary transition">Blog</a>
-                </div>
-                <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new" target="_blank" class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary transition">Termin buchen</a>
+    <!-- Header/Navigation -->
+    <header class="py-4 px-8 bg-cream/95 fixed w-full z-50 top-0">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <nav class="hidden md:flex space-x-8">
+                <a href="#aboutme" class="text-dark hover:text-gold transition font-sans text-sm tracking-wide">About me</a>
+                <a href="#preise" class="text-dark hover:text-gold transition font-sans text-sm tracking-wide">Preise</a>
+                <a href="#kontakt" class="text-dark hover:text-gold transition font-sans text-sm tracking-wide">Kontakt</a>
+            </nav>
+            
+            <div class="text-center">
+                <a href="#start" class="block">
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/cropped-cropped-Jennifer-Krieg-Hairdressing1500-x-1500-px.jpg" 
+                         alt="Jennifer Krieg Hairdressing" 
+                         class="h-16 w-auto mx-auto">
+                </a>
+            </div>
+            
+            <div class="flex space-x-4">
+                <a href="https://www.facebook.com/jennykrieg83/" target="_blank" class="text-dark hover:text-gold transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/jennyinthehair/" target="_blank" class="text-dark hover:text-gold transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/channel/UCZxa1P5HcAevcNBTnSaO97Q" target="_blank" class="text-dark hover:text-gold transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+                <a href="https://www.pinterest.de/jennyintheblog/" target="_blank" class="text-dark hover:text-gold transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+                </a>
             </div>
         </div>
-    </nav>
+    </header>
 
     <!-- Hero Section -->
-    <section id="start" class="relative min-h-screen flex items-center justify-center bg-secondary overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-secondary via-dark to-secondary opacity-90"></div>
-        <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%23d5b781\" fill-opacity=\"0.05\"%3E%3Cpath d=\"M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <section id="start" class="min-h-screen relative bg-navy flex items-center justify-center" style="background-image: url('https://jennifer-krieg.de/wp-content/uploads/2022/06/md2x-4.jpeg'); background-size: cover; background-position: center;">
+        <div class="absolute inset-0 bg-navy/70"></div>
         
-        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto fade-in">
-            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Friseur Rostock</h1>
-            <h2 class="text-2xl md:text-3xl text-primary mb-8">JK Hairdressing: Dein Traumhaar in besten Händen</h2>
-            <p class="text-lg text-gray-300 mb-10 max-w-2xl mx-auto">
-                Bei JK Hairdressing dreht sich alles um dich und dein strahlendes Haar. Als Expertin für Balayage, Blond und Haarverlängerung ist es meine Mission, deinen individuellen Haartraum Wirklichkeit werden zu lassen.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new" target="_blank" class="bg-primary text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-secondary transition">Termin buchen</a>
-                <a href="#aboutme" class="border-2 border-primary text-primary px-8 py-4 rounded-full text-lg font-semibold hover:bg-primary hover:text-white transition">Mehr erfahren</a>
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto pt-20">
+            <h1 class="text-5xl md:text-7xl font-light text-white mb-6">Friseur Rostock</h1>
+            
+            <h2 class="text-2xl md:text-3xl text-gold mb-8 font-light">JK Hairdressing: Dein Traumhaar in besten Händen</h2>
+            
+            <div class="text-lg text-cream/90 mb-8 max-w-2xl mx-auto space-y-4">
+                <p>Bei JK Hairdressing dreht sich alles um dich und dein strahlendes Haar. Als Expertin für Balayage, Blond, und Haarverlängerung ist es meine Mission, deinen individuellen Haartraum Wirklichkeit werden zu lassen.</p>
+                <p>Willkommen bei Jennifer Krieg am Wiener Platz.</p>
             </div>
-            <p class="text-gray-400 mt-6">Willkommen bei Jennifer Krieg am Wiener Platz</p>
+            
+            <div class="w-24 h-px bg-gold mx-auto mb-8"></div>
+            
+            <!-- Salonized Reviews Widget -->
+            <div class="bg-white/10 backdrop-blur-sm p-4 rounded-lg inline-block">
+                <div class="salonized-reviews-mini" data-link="https://jennifer-krieg-jk.salonized.com/reviews"></div>
+            </div>
         </div>
         
-        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
-            <a href="#aboutme" class="text-primary text-4xl">⌄</a>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2">
+            <a href="#aboutme" class="text-gold text-3xl animate-bounce">⌄</a>
         </div>
     </section>
 
     <!-- About Me Section -->
     <section id="aboutme" class="py-20 bg-cream">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="slide-in-left">
-                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=600&h=600&fit=crop" alt="Jennifer Krieg - Friseurin aus Leidenschaft" class="rounded-lg shadow-2xl w-full object-cover aspect-square">
+                <div class="fade-in-up">
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/md2x-4.jpeg" 
+                         alt="Jennifer Krieg" 
+                         class="w-full h-auto shadow-2xl"
+                         style="max-width: 500px;">
                 </div>
-                <div class="slide-in-right">
-                    <h2 class="text-4xl font-bold text-secondary mb-6">Jennifer Krieg: Deine Haarwünsche in stilvollem Ambiente</h2>
-                    <div class="prose text-dark space-y-4">
-                        <p>Hallo, ich bin Jenny, Herz und Seele von JK Hairdressing. Als gebürtige Rostockerin, Mutter einer Familie und Friseurmeisterin mit 22 Jahren Erfahrung, widme ich mich voll und ganz der Erfüllung deiner Styling-Wünsche.</p>
-                        <p>In meinem Salon kreiere ich nicht nur Frisuren – ich schaffe Erlebnisse. Meine Leidenschaft gilt vor allem Langhaarfrisuren, Balayage und Blondcolorationen, die jeden individuellen Stil unterstreichen. Mein Ziel ist es, den Wert deiner natürlichen Schönheit mit kunstvollen Colorationen und präzisen Schnitten hervorzuheben.</p>
-                        <p>Gemeinsam mit dir möchte ich deine Styling-Träume wahr werden lassen und dir ein Ambiente bieten, in dem du dich rundum wohlfühlst. Lass uns zusammen dein Haar so verwandeln, dass deine Persönlichkeit perfekt widerspiegelt wird und du eine Frisur hast, die dir jeden Tag Freude bereitet.</p>
+                
+                <div class="space-y-6">
+                    <h2 class="text-4xl font-light text-navy">Strahlend schönes Haar in deinem Friseursalon Rostock</h2>
+                    
+                    <div class="space-y-4 text-dark/80">
+                        <p>Entdecke die Freude an gesundem und glänzendem Haar! Bei JK Hairdressing erwartet dich eine entspannte und herzliche Atmosphäre, in der ich mich ganz auf deine Haarbedürfnisse konzentriere. Statt Haare wie am Fließband zu schneiden, nehme ich mir mit großer Leidenschaft Zeit und Muße für deine individuelle Beratung und Pflege.</p>
+                        
+                        <p>Gemeinsam besprechen wir, was du dir wünschst und welche Vorstellungen du bereits hast. Bringe gerne Bilder als Inspiration mit, vielleicht hast du was auf Instagram entdeckt? Oder in einer Zeitschrift? Gerne schaue ich mir deine Vorstellungen an und wir überlegen, wie und ob es sich umsetzen lässt.</p>
+                        
+                        <p>Mein Ziel ist es, dir zu helfen, jeden Tag mit einem Haar zu starten, das nicht nur gut aussieht, sondern sich auch fantastisch anfühlt.</p>
                     </div>
-                    <div class="mt-8 flex items-center space-x-4">
-                        <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop" alt="Jennifer Krieg" class="w-16 h-16 rounded-full object-cover">
+                    
+                    <!-- Author Box -->
+                    <div class="flex items-center space-x-4 pt-6 border-t border-gold/30">
+                        <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/Beach-300x300.jpg" 
+                             alt="Jennifer Krieg" 
+                             class="w-20 h-20 rounded-full object-cover">
+                        
                         <div>
-                            <p class="font-semibold text-secondary">Jennifer Krieg</p>
-                            <p class="text-sm text-gray-600">Inhaberin JK Hairdressing</p>
+                            <h4 class="font-semibold text-navy">Jennifer Krieg</h4>
+                            <p class="text-sm text-dark/60">Inhaberin Jennifer Krieg - Hairdressing</p>
                         </div>
                     </div>
-                    <div class="mt-6 flex space-x-4">
-                        <a href="https://www.instagram.com/jennyinthehair/" target="_blank" class="text-secondary hover:text-primary text-2xl transition">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    
+                    
+                    <!-- Social Icons -->
+                    <div class="flex space-x-4 pt-4">
+                        <a href="https://www.facebook.com/jennykrieg83/" target="_blank" class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
                         </a>
-                        <a href="https://www.facebook.com/jennykrieg83/" target="_blank" class="text-secondary hover:text-primary text-2xl transition">
-                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        <a href="https://www.instagram.com/jennyinthehair/" target="_blank" class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCZxa1P5HcAevcNBTnSaO97Q" target="_blank" class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="https://www.pinterest.de/jennyintheblog/" target="_blank" class="w-10 h-10 rounded-full bg-navy text-white flex items-center justify-center hover:bg-gold transition">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
                         </a>
                     </div>
                 </div>
@@ -126,142 +162,146 @@
         </div>
     </section>
 
-    <!-- Leistungen Section -->
-    <section id="leistungen" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-secondary mb-4">Das kannst du in deinem Friseursalon Rostock erwarten</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Von Balayage bis Brautstyling – entdecke meine Leistungen für dein perfektes Haar</p>
+    <!-- Balayage Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/md2x-11.jpeg" 
+                         alt="Balayage Rostock" 
+                         class="w-full h-auto shadow-xl"
+                         style="max-width: 500px;">
+                </div>
+                
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-semibold text-gold">Balayage Rostock und innovative Colorationen</h3>
+                    
+                    <div class="space-y-4 text-dark/80">
+                        <p>Tauche ein in die Welt der Farben bei JK Hairdressing! Ob du eine natürliche Blondfärbung, lebendige Strähnen oder eine komplette Farbveränderung suchst – mit meinen Balayage- und Colorationstechniken kreiere ich den perfekten Look, der deine Persönlichkeit unterstreicht.</p>
+                        
+                        <p>Balayage, französisch für "Fegen", beschreibt eine Behandlung, bei der Highlights durch das Auftragen von Blondierung in sanften Strichen, ähnlich dem Fegen, kreiert werden, um dem Look eine lebendige Dimension zu verleihen. Dabei wird jede Frisur durch individuell platzierte Strähnchen hervorgehoben, was eine harmonische Verschmelzung ähnlich den Schichten von Cookies erzeugt.</p>
+                        
+                        <p>Meine Expertise in modernen Färbemethoden garantiert ein Ergebnis, das nicht nur atemberaubend aussieht, sondern auch dein Haar schont.</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Haarpflege Section -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                
+                <div class="order-2 md:order-1 space-y-6">
+                    <h3 class="text-3xl font-semibold text-navy">Von Haarpflege bis Brautstyling</h3>
+                    
+                    <div class="space-y-4 text-dark/80">
+                        <p>Dein Haar verdient das Beste, und das biete ich dir mit einer breiten Palette an Dienstleistungen. Meine Haarpflegetreatments verwöhnen und revitalisieren dein Haar, während die Tönungen und Strähnen für das gewisse Etwas sorgen.</p>
+                        
+                        <p>Auf der Suche nach dem perfekten Haarschnitt? Ich biete stilvolle Schnitte für Frauen und Männer. Für besondere Anlässe, wie deine Hochzeit, erwartet dich ein exklusiver Brautservice, der dich zum Strahlen bringt.</p>
+                        
+                        <p>Zudem bin ich spezialisiert auf Haarverdichtung, Extensions mit modernsten Techniken wie Tape-Verfahren und Ultra Sonic Touch sowie auf Augenbrauen- und Wimpernservices.</p>
+                        
+                        <p>Erlebe den Luxus meines Hair Spas – dein Ort für ultimative Haarpflege und Entspannung.</p>
+                    </div>
+                    
+                    <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new?widget_id=TuLsmgdbL1WGwy2tHqJj9hkg" 
+                       target="_blank"
+                       class="inline-block bg-gold text-white px-8 py-3 rounded hover:bg-navy transition">
+                        Termin buchen
+                    </a>
+                </div>
+                
+                <div class="order-1 md:order-2">
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2021/01/Design-ohne-Titel.jpg" 
+                         alt="Haarpflege" 
+                         class="w-full h-auto shadow-xl"
+                         style="max-width: 714px;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preise Section -->
+    <section id="preise" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-light text-navy text-center mb-16">LEISTUNGEN & PREISE</h2>
             
             <div class="grid md:grid-cols-2 gap-12">
-                <!-- Balayage -->
-                <div class="group">
-                    <div class="overflow-hidden rounded-lg mb-6">
-                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&h=600&fit=crop" alt="Balayage Rostock" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-                    <h3 class="text-2xl font-bold text-secondary mb-4">Balayage Rostock und innovative Colorationen</h3>
-                    <p class="text-gray-600 mb-4">Tauche ein in die Welt der Farben! Balayage, französisch für "Fegen", beschreibt eine Behandlung, bei der Highlights durch sanfte Striche kreiert werden. Jede Frisur wird durch individuell platzierte Strähnchen hervorgehoben.</p>
-                    <a href="/balayage-rostock/" class="text-primary hover:text-secondary font-semibold">Mehr über Balayage →</a>
+                <!-- Preise Image -->
+                <div>
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/elementor/thumbs/Jennifer-4000-x-3000-px-500-×-500-px-1024-×-1024-px-q74kvday8kl029by2o880cw0wzv79cfdkzc43d8meo.jpg" 
+                         alt="Jennifer bei der Arbeit" 
+                         class="w-full h-auto shadow-xl"
+                         style="max-width: 500px;">
                 </div>
                 
-                <!-- Brautstyling -->
-                <div class="group">
-                    <div class="overflow-hidden rounded-lg mb-6">
-                        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&h=600&fit=crop" alt="Brautstyling Rostock" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                <!-- Service List -->
+                <div class="space-y-8">
+                    <div class="border-b border-gold/30 pb-6">
+                        <div class="flex items-center mb-2">
+                            <span class="text-gold text-xl mr-3">»</span>
+                            <h3 class="text-xl font-semibold text-navy">Balayage inklusive Glossing ab 160 €</h3>
+                        </div>
+                        <p class="text-dark/70 text-sm">Entdecke die Kunst der Balayage – eine maßgeschneiderte Blondierungstechnik, die natürliche Farbverläufe und wunderschöne Highlights kreiert. Da diese Technik individuell an deine Haarfarbe und Wünsche angepasst wird, variiert der Preis entsprechend.</p>
                     </div>
-                    <h3 class="text-2xl font-bold text-secondary mb-4">Brautzauber: Dein Traumstyling</h3>
-                    <p class="text-gray-600 mb-4">An deinem großen Tag verdienst du das Beste! Ob im Salon oder mobil vor Ort – ich sorge für dein perfektes Brautstyling inklusive Make-up und Probetermin.</p>
-                    <ul class="space-y-2 text-gray-600 mb-4">
-                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Brautzauber im Salon: 324 €</li>
-                        <li class="flex items-center"><span class="text-primary mr-2">✓</span> Brautzauber mobil: ab 409 €</li>
-                    </ul>
-                    <a href="/brautstyling-rostock/" class="text-primary hover:text-secondary font-semibold">Mehr erfahren →</a>
+                    
+                    <div class="bg-cream/50 p-6 rounded-lg">
+                        <div class="flex items-center mb-2">
+                            <span class="text-gold text-xl mr-3">⚠</span>
+                            <h3 class="text-xl font-semibold text-navy">Buchungshinweise</h3>
+                        </div>
+                        <p class="text-dark/70 text-sm">Es ist keine Online-Buchung für diese Pakete möglich. Buche jetzt deinen persönlichen Beratungstermin unter dem Buchungsbutton und ich erstelle dir gerne deinen Kostenvoranschlag.</p>
+                    </div>
+                    
+                    <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new?widget_id=TuLsmgdbL1WGwy2tHqJj9hkg" 
+                       target="_blank"
+                       class="inline-block bg-gold text-white px-8 py-3 rounded hover:bg-navy transition">
+                        Termin buchen
+                    </a>
                 </div>
             </div>
-            
-            <!-- Das kannst du erwarten -->
-            <div class="mt-20">
-                <h3 class="text-3xl font-bold text-secondary text-center mb-12">Das kannst du in deinem Friseursalon Rostock erwarten</h3>
+        </div>
+    </section>
+
+    <!-- Brautstyling Section -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/elementor/thumbs/Brautzauber-q74kv7nx3kcpo07unj402ah8yu6sp9tsypxd6qy0eg.jpg" 
+                         alt="Brautzauber" 
+                         class="w-full h-auto shadow-xl"
+                         style="max-width: 500px;">
+                </div>
                 
-                <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <h3 class="text-3xl font-semibold text-gold">Brautzauber: Dein Traumstyling</h3>
+                    
                     <div class="space-y-6">
                         <div class="flex items-start space-x-4">
-                            <span class="text-3xl">✨</span>
+                            <div class="text-gold text-2xl">🏠</div>
                             <div>
-                                <h4 class="font-bold text-secondary">Langhaarfrisuren</h4>
-                                <p class="text-gray-600">Spezialisiert auf langes Haar – Schnitte, die deine Haarlänge optimal zur Geltung bringen</p>
+                                <h4 class="font-semibold text-navy mb-1">BRAUTZAUBER IM SALON: 324 €</h4>
+                                <p class="text-dark/70 text-sm">Das Brautstylingpaket im Salon bereitet dich perfekt auf deinen großen Tag vor. Es beinhaltet einen Probetermin, dein persönliches Brautstyling und das Make-up.</p>
                             </div>
                         </div>
                         
                         <div class="flex items-start space-x-4">
-                            <span class="text-3xl">🎨</span>
+                            <div class="text-gold text-2xl">🚗</div>
                             <div>
-                                <h4 class="font-bold text-secondary">Balayage & Blond</h4>
-                                <p class="text-gray-600">Natürliche Highlights und brillantes Blond mit professioneller Technik</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <span class="text-3xl">💆‍♀️</span>
-                            <div>
-                                <h4 class="font-bold text-secondary">Hair Spa & Pflege</h4>
-                                <p class="text-gray-600">Verwöhnende Treatments für gesundes, glänzendes Haar</p>
+                                <h4 class="font-semibold text-navy mb-1">BRAUTZAUBER MOBIL: AB 409 €</h4>
+                                <p class="text-dark/70 text-sm">Wähle das mobile Brautstylingpaket, um dich an deinem Wunschort für den besonderen Tag vorbereiten zu lassen. Das Paket umfasst einen Probetermin, dein Brautstyling, Make-up sowie die Anfahrt zu deinem gewählten Ort.</p>
                             </div>
                         </div>
                     </div>
                     
-                    <div class="space-y-6">
-                        <div class="flex items-start space-x-4">
-                            <span class="text-3xl">💇‍♀️</span>
-                            <div>
-                                <h4 class="font-bold text-secondary">Haarverdichtung</h4>
-                                <p class="text-gray-600">Extensions mit modernsten Techniken: Tape-Verfahren und Ultra Sonic Touch</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <span class="text-3xl">💒</span>
-                            <div>
-                                <h4 class="font-bold text-secondary">Brautstyling</h4>
-                                <p class="text-gray-600">Exklusiver Brautservice mit Probetermin, Styling und Make-up</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4">
-                            <span class="text-3xl">👁️</span>
-                            <div>
-                                <h4 class="font-bold text-secondary">Wimpern & Augenbrauen</h4>
-                                <p class="text-gray-600">Perfektion bis ins Detail – für deinen kompletten Look</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Galerie Section -->
-    <section id="galerie" class="py-20 bg-cream">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-secondary mb-4">Friseur Rostock: Individuelle Schönheit im Fokus</h2>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Mit Fachwissen, Kreativität und einer persönlichen Note widme ich mich deinem Haar</p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div class="overflow-hidden rounded-lg group">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&h=500&fit=crop" alt="Balayage Arbeit" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg group">
-                    <img src="https://images.unsplash.com/photo-1492106087820-71f1a00d2b11?w=400&h=500&fit=crop" alt="Blond Coloration" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg group">
-                    <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?w=400&h=500&fit=crop" alt="Friseur Salon" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                </div>
-                <div class="overflow-hidden rounded-lg group">
-                    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=400&h=500&fit=crop" alt="Haarstyling" class="w-full h-64 object-cover group-hover:scale-110 transition duration-500">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials -->
-    <section class="py-20 bg-secondary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-3xl font-bold text-white text-center mb-12">Was meine Kunden sagen</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
-                    <p class="text-gray-200 mb-4 italic">"Hair Suite ist ein sehr schöner moderner Friseursalon, der etwas Gemütliches ausstrahlt und zum Wohlfühlen einlädt. Ich wurde sehr gut beraten und bin mit meiner neuen Frisur mehr als zufrieden."</p>
-                    <p class="text-primary font-semibold">— Elisa F.</p>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
-                    <p class="text-gray-200 mb-4 italic">"Lasst euch schon bei der Haarwäsche überraschen. Der Wohlfühleffekt ist schon vor der Schere da. Danke für den perfekten Haarschnitt."</p>
-                    <p class="text-primary font-semibold">— Ute Rose</p>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm p-8 rounded-lg">
-                    <p class="text-gray-200 mb-4 italic">"Ein sehr schöner Salon und eine nette und kompetente Inhaberin. Kann man nur weiter empfehlen."</p>
-                    <p class="text-primary font-semibold">— Reik Moschke</p>
+                    <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new?widget_id=TuLsmgdbL1WGwy2tHqJj9hkg" 
+                       target="_blank"
+                       class="inline-block bg-gold text-white px-8 py-3 rounded hover:bg-navy transition">
+                        Termin buchen
+                    </a>
                 </div>
             </div>
         </div>
@@ -269,184 +309,177 @@
 
     <!-- Entspannung Section -->
     <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div class="order-2 md:order-1">
-                    <h2 class="text-4xl font-bold text-secondary mb-6">Entspannung und Schönheit in Harmonie</h2>
-                    <p class="text-gray-600 mb-4">Bei JK Hairdressing geht es um ein Gesamterlebnis, bei dem du dich erholen und wohlfühlen kannst. In meiner Wohlfühloase kannst du den Alltagsstress hinter dir lassen.</p>
-                    <p class="text-gray-600 mb-6">Mit meiner Leidenschaft für Haare und einem Auge fürs Detail sorge ich dafür, dass du jedes Mal mit einem Lächeln und einer Frisur, die deiner Persönlichkeit entspricht, den Salon verlässt.</p>
-                    <blockquote class="border-l-4 border-primary pl-4 italic text-secondary text-lg">
-                        "Schönheit beginnt in dem Moment, in dem du beschließt, du selbst zu sein!"<br>
-                        <span class="text-sm text-gray-500 not-italic">— Coco Chanel</span>
+                
+                <div class="order-2 md:order-1 space-y-6">
+                    <h2 class="text-4xl font-light text-navy">Entspannung und Schönheit in Harmonie</h2>
+                    
+                    <div class="space-y-4 text-dark/80">
+                        <p>Bei JK Hairdressing geht es um ein Gesamterlebnis, bei dem du dich erholen und wohlfühlen kannst. In meiner Wohlfühloase kannst du den Alltagsstress hinter dir lassen und in eine Welt der Entspannung und Schönheit eintauchen.</p>
+                        
+                        <p>Mit meiner Leidenschaft für Haare und einem Auge fürs Detail sorge ich dafür, dass du jedes Mal mit einem Lächeln und einer Frisur, die deiner Persönlichkeit entspricht, den Salon verlässt. Freue dich auf Haare, die so sitzen, wie du es dir wünschst und ein neues Lebensgefühl. Lass uns gemeinsam deine natürliche Schönheit hervorheben.</p>
+                    </div>
+                    
+                    <blockquote class="border-l-4 border-gold pl-6 italic text-xl text-navy">
+                        "Schönheit beginnt in dem Moment, in dem du beschließt, du selbst zu sein!"
+                        <cite class="block text-sm not-italic text-dark/60 mt-2">COCO CHANEL</cite>
                     </blockquote>
                 </div>
+                
                 <div class="order-1 md:order-2">
-                    <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=600&h=600&fit=crop" alt="Wohlfühloase" class="rounded-lg shadow-2xl w-full object-cover aspect-square">
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/md2x-10.jpeg" 
+                         alt="Entspannung" 
+                         class="w-full h-auto shadow-xl"
+                         style="max-width: 800px;">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Preise/CTA Section -->
-    <section id="preise" class="py-20 bg-primary">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-white mb-4">LEISTUNGEN & PREISE</h2>
-                <p class="text-xl text-white/90 max-w-2xl mx-auto">Dein Haar verdient das Beste – entdecke meine vielfältigen Angebote</p>
+    <!-- CTA Section -->
+    <section class="py-20 bg-gold">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-4xl font-light text-white mb-6">Friseur Rostock: Jetzt deinen Termin vereinbaren</h2>
+            
+            <p class="text-xl text-white/90 mb-10">Egal ob du von einer atemberaubenden neuen Farbe träumst oder einem Schnitt, der deine Individualität betont, buche jetzt deinen Termin bei uns.</p>
+            
+            <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new?widget_id=TuLsmgdbL1WGwy2tHqJj9hkg" 
+               target="_blank"
+               class="inline-block bg-white text-navy px-12 py-4 rounded-full text-lg font-semibold hover:bg-dark hover:text-white transition shadow-xl">
+                Termin buchen
+            </a>
+        </div>
+    </section>
+
+    <!-- Galerie Section -->
+    <section class="py-20 bg-cream">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-light text-navy mb-4">Friseur Rostock: Individuelle Schönheit im Fokus</h2>
+                <p class="text-lg text-dark/70">Mit Fachwissen, Kreativität und einer persönlichen Note widme ich mich deinem Haar</p>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Preise Image -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-xl">
-                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&h=800&fit=crop" alt="Preise & Leistungen" class="w-full h-96 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-2xl font-bold text-secondary mb-4">Meine Spezialitäten</h3>
-                        <ul class="space-y-3 text-gray-700">
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span>Balayage & Colorationen</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span>Haarpflege & Hair Spa</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span>Haarverdichtung & Extensions</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span>Brautstyling & Make-up</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span>Wimpern & Augenbrauen</li>
-                        </ul>
-                    </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="overflow-hidden group">
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/md2x-11.jpeg" 
+                         alt="Balayage" 
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                 </div>
                 
-                <!-- Preisliste -->
-                <div class="space-y-6">
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg text-white">
-                        <div class="flex items-center mb-4">
-                            <span class="text-2xl mr-3">✨</span>
-                            <h3 class="text-xl font-bold">Balayage inklusive Glossing</h3>
-                        </div>
-                        <p class="text-3xl font-bold text-white mb-2">ab 160 €</p>
-                        <p class="text-white/80 text-sm mb-4">Entdecke die Kunst der Balayage – maßgeschneiderte Blondierung für natürliche Farbverläufe. Preis variiert je nach Haarlänge und Aufwand.</p>
-                        <a href="/balayage-rostock/" class="text-white underline hover:text-cream">Mehr erfahren →</a>
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg text-white">
-                        <div class="flex items-center mb-4">
-                            <span class="text-2xl mr-3">💒</span>
-                            <h3 class="text-xl font-bold">Brautzauber im Salon</h3>
-                        </div>
-                        <p class="text-3xl font-bold text-white mb-2">324 €</p>
-                        <ul class="text-white/80 text-sm space-y-1 mb-4">
-                            <li>• Probetermin inklusive</li>
-                            <li>• Professionelles Brautstyling</li>
-                            <li>• Make-up</li>
-                        </ul>
-                        <a href="/brautstyling-rostock/" class="text-white underline hover:text-cream">Mehr erfahren →</a>
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg text-white">
-                        <div class="flex items-center mb-4">
-                            <span class="text-2xl mr-3">🚗</span>
-                            <h3 class="text-xl font-bold">Brautzauber Mobil</h3>
-                        </div>
-                        <p class="text-3xl font-bold text-white mb-2">ab 409 €</p>
-                        <ul class="text-white/80 text-sm space-y-1 mb-4">
-                            <li>• Anfahrt zu deinem Wunschort</li>
-                            <li>• Probetermin inklusive</li>
-                            <li>• Styling & Make-up vor Ort</li>
-                        </ul>
-                        <a href="/brautstyling-rostock/" class="text-white underline hover:text-cream">Mehr erfahren →</a>
-                    </div>
-                    
-                    <div class="bg-white/10 backdrop-blur-sm p-6 rounded-lg text-white border-2 border-primary">
-                        <div class="flex items-center mb-4">
-                            <span class="text-2xl mr-3">💇‍♀️</span>
-                            <h3 class="text-xl font-bold">Haarverdichtung</h3>
-                        </div>
-                        <p class="text-3xl font-bold text-white mb-2">Preis auf Anfrage</p>
-                        <p class="text-white/80 text-sm mb-4">Tape-In Extensions & Ultra Sonic Touch – für mehr Volumen und Länge. Kostenlose Beratung.</p>
-                        <a href="/haarverdichtung-rostock/" class="text-white underline hover:text-cream">Mehr erfahren →</a>
-                    </div>
-                    
-                    <div class="bg-white p-6 rounded-lg">
-                        <p class="text-secondary font-semibold mb-2">⚠️ Buchungshinweis</p>
-                        <p class="text-gray-600 text-sm">Für Balayage-Pakete ist keine Online-Buchung möglich. Buche einen persönlichen Beratungstermin und ich erstelle dir gerne einen Kostenvoranschlag.</p>
-                    </div>
+                <div class="overflow-hidden group">
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/md2x-12.jpeg" 
+                         alt="Blond" 
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
                 </div>
-            </div>
-            
-            <div class="text-center mt-12">
-                <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new" target="_blank" class="inline-block bg-white text-secondary px-10 py-4 rounded-full text-lg font-semibold hover:bg-dark hover:text-white transition shadow-lg">Termin buchen</a>
+                
+                <div class="overflow-hidden group">
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/md2x.jpeg" 
+                         alt="Dyson Airwrap" 
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </div>
+                
+                <div class="overflow-hidden group">
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/md2x-9-e1655759123835.jpeg" 
+                         alt="Jennifer Krieg Hairdressing" 
+                         class="w-full h-64 object-cover group-hover:scale-105 transition duration-500">
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Kontakt Section -->
-    <section id="kontakt" class="py-20 bg-cream">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="kontakt" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="grid md:grid-cols-2 gap-12">
-                <div>
-                    <h2 class="text-4xl font-bold text-secondary mb-6">Kontakt</h2>
-                    <div class="space-y-4">
+                <!-- Kontakt Info -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-semibold text-navy mb-2">Jennifer Krieg</h3>
+                        <h4 class="text-lg text-gold mb-4">Hairdressing</h4>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 gap-8">
                         <div>
-                            <h3 class="font-bold text-secondary">Adresse</h3>
-                            <p class="text-gray-600">Wiener Platz 8<br>18069 Rostock</p>
+                            <h5 class="font-semibold text-navy mb-2">Adresse</h5>
+                            <p class="text-dark/70">Wiener Platz 8<br>18069 Rostock</p>
                         </div>
+                        
                         <div>
-                            <h3 class="font-bold text-secondary">Telefon</h3>
-                            <a href="tel:+4915254572195" class="text-primary hover:text-secondary">+49 152 54572195</a>
-                        </div>
-                        <div>
-                            <h3 class="font-bold text-secondary">E-Mail</h3>
-                            <a href="mailto:mail@jennifer-krieg.de" class="text-primary hover:text-secondary">mail@jennifer-krieg.de</a>
+                            <h5 class="font-semibold text-navy mb-2">Kontakt</h5>
+                            <p class="text-dark/70">Telefon: 0152 54572195<br><a href="mailto:mail@jennifer-krieg.de" class="text-gold hover:underline">mail@jennifer-krieg.de</a></p>
                         </div>
                     </div>
                 </div>
-                <div>
-                    <h3 class="text-xl font-bold text-secondary mb-4">Anfahrt</h3>
-                    <div class="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2384.7745649916956!2d12.0784!3d54.0894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTTCsDA1JzIyLjAiTiAxMsKwMDQnNDIuMiJF!5e0!3m2!1sde!2sde!4v1"
-                            width="100%" 
-                            height="100%" 
-                            style="border:0;" 
-                            allowfullscreen="" 
-                            loading="lazy"
-                            title="JK Hairdressing - Wiener Platz 8, 18069 Rostock">
-                        </iframe>
-                    </div>
+                
+                <!-- Map -->
+                <div class="h-96 bg-gray-100">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2384.7745649916956!2d12.0784!3d54.0894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTTCsDA1JzIyLjAiTiAxMsKwMDQnNDIuMiJF!5e0!3m2!1sde!2sde!4v1"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        class="grayscale hover:grayscale-0 transition"
+                    ></iframe>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-secondary text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <footer class="bg-navy text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo -->
                 <div>
-                    <h4 class="text-xl font-bold text-primary mb-4">JK Hairdressing</h4>
-                    <p class="text-gray-400">Dein Friseursalon in Rostock für Balayage, Blond & Brautstyling.</p>
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/cropped-cropped-Jennifer-Krieg-Hairdressing1500-x-1500-px.jpg" 
+                         alt="Jennifer Krieg" 
+                         class="h-24 w-auto mb-4">
+                    
+                    <div class="flex space-x-3">
+                        <a href="https://www.facebook.com/jennykrieg83/" target="_blank" class="text-white hover:text-gold transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/hairsuite_by_jennifer_krieg/" target="_blank" class="text-white hover:text-gold transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCZxa1P5HcAevcNBTnSaO97Q" target="_blank" class="text-white hover:text-gold transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+                        <a href="https://www.pinterest.de/jennyintheblog/" target="_blank" class="text-white hover:text-gold transition">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
+                        </a>
+                    </div>
                 </div>
+                
+                <!-- Info -->
                 <div>
-                    <h4 class="font-bold text-white mb-4">Leistungen</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#" class="hover:text-primary transition">Balayage</a></li>
-                        <li><a href="#" class="hover:text-primary transition">Blond</a></li>
-                        <li><a href="#" class="hover:text-primary transition">Haarverlängerung</a></li>
-                        <li><a href="#" class="hover:text-primary transition">Brautstyling</a></li>
+                    <h4 class="text-gold font-semibold mb-4">jennifer krieg</h4>
+                    <p class="text-white/70 text-sm">Wiener Platz 8<br>18069 Rostock</p>
+                    <p class="text-white/70 text-sm mt-2"><a href="mailto:mail@jennifer-krieg.de" class="hover:text-gold transition">mail@jennifer-krieg.de</a><br>0152 54572195</p>
+                </div>
+                
+                <!-- Leistungen -->
+                <div>
+                    <h4 class="text-gold font-semibold mb-4">Leistungen</h4>
+                    <ul class="text-white/70 text-sm space-y-2">
+                        <li><a href="/haarverdichtung-rostock/" class="hover:text-gold transition">Haarverdichtung Rostock</a></li>
                     </ul>
                 </div>
+                
+                <!-- Rechtliches -->
                 <div>
-                    <h4 class="font-bold text-white mb-4">Rechtliches</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/impressum.html" class="hover:text-primary transition">Impressum</a></li>
-                        <li><a href="/datenschutz.html" class="hover:text-primary transition">Datenschutz</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-white mb-4">Blog</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="/blog/balayage-rostock/" class="hover:text-primary transition">Balayage in Rostock</a></li>
-                        <li><a href="/blog/brautstyling-rostock/" class="hover:text-primary transition">Brautstyling</a></li>
-                        <li><a href="/blog/" class="hover:text-primary transition">Alle Artikel</a></li>
+                    <h4 class="text-gold font-semibold mb-4">Rechtliches</h4>
+                    <ul class="text-white/70 text-sm space-y-2">
+                        <li><a href="/datenschutz.html" class="hover:text-gold transition">Datenschutzerklärung</a></li>
+                        <li><a href="/impressum.html" class="hover:text-gold transition">Impressum</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-700 pt-8 text-center text-gray-400">
+            
+            <div class="border-t border-white/20 pt-8 text-center text-white/50 text-sm">
                 <p>&copy; 2026 JK Hairdressing by Jennifer Krieg. Alle Rechte vorbehalten.</p>
             </div>
         </div>

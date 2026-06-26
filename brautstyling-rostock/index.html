@@ -6,14 +6,26 @@
     <title>Brautstyling Rostock ✓ Hochzeitsfrisur & Make-up | JK Hairdressing</title>
     <meta name="description" content="Brautstyling in Rostock ✓ Salon 324€ ✓ Mobil ab 409€ ✓ Probetermin inklusive ✓ Make-up & Hairstyling ✓ Jetzt Termin sichern!">
     <meta name="keywords" content="Brautstyling Rostock, Hochzeitsfrisur Rostock, Braut Make-up Rostock">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: { primary: '#D5B781', secondary: '#0E2A3B', dark: '#04151F', cream: '#F9F5EE' },
-                    fontFamily: { serif: ['Noto Serif JP', 'serif'] }
+                    colors: {
+                        'gold': '#D5B781',
+                        'navy': '#0E2A3B',
+                        'dark': '#04151F',
+                        'cream': '#F9F5EE'
+                    },
+                    fontFamily: {
+                        'serif': ['"Noto Serif JP"', 'serif']
+                    }
                 }
             }
         }
@@ -21,101 +33,143 @@
 </head>
 <body class="font-serif text-dark bg-cream">
 
-    <!-- Hero -->
-    <section class="min-h-screen bg-secondary relative overflow-hidden">
-        <div class="absolute inset-0 bg-gradient-to-br from-secondary via-dark to-secondary"></div>
-        <div class="relative z-10 max-w-6xl mx-auto px-4 py-20">
-            <div class="text-center mb-12">
-                <p class="text-primary font-semibold text-lg mb-4">Dein großer Tag verdient Perfektion</p>
-                <h1 class="text-5xl md:text-6xl font-bold text-white mb-6">Brautstyling Rostock</h1>
-                <p class="text-2xl text-primary mb-8">Professionelles Brautstyling mit Probetermin, Hairstyling & Make-up</p>
-                
-                <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new" class="bg-primary text-white px-10 py-5 rounded-full text-xl font-bold hover:bg-white hover:text-secondary transition shadow-xl">Jetzt Termin buchen</a>
-                </div>
+    <!-- Header -->
+    <header class="py-4 px-8 bg-cream/95 fixed w-full z-50 top-0">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <nav class="hidden md:flex space-x-8">
+                <a href="/" class="text-dark hover:text-gold transition text-sm tracking-wide">← Zurück zur Startseite</a>
+            </nav>
+            
+            <div class="text-center">
+                <a href="/" class="block">
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/cropped-cropped-Jennifer-Krieg-Hairdressing1500-x-1500-px.jpg" 
+                         alt="Jennifer Krieg Hairdressing" 
+                         class="h-16 w-auto mx-auto">
+                </a>
             </div>
+            
+            <div class="flex space-x-4">
+                <a href="https://www.instagram.com/jennyinthehair/" target="_blank" class="text-dark hover:text-gold transition">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="min-h-screen bg-navy relative flex items-center justify-center pt-20">
+        <div class="absolute inset-0 bg-gradient-to-br from-navy via-dark to-navy"></div>
+        
+        <div class="relative z-10 text-center px-4 max-w-4xl mx-auto">
+            <p class="text-gold font-semibold text-lg mb-4">Dein großer Tag verdient Perfektion</p>
+            
+            <h1 class="text-5xl md:text-6xl font-light text-white mb-6">Brautstyling Rostock</h1>
+            
+            <h2 class="text-2xl md:text-3xl text-gold mb-8 font-light">Professionelles Brautstyling mit Probetermin, Hairstyling & Make-up</h2>
+            
+            <div>
+                <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new?widget_id=TuLsmgdbL1WGwy2tHqJj9hkg" 
+                   target="_blank"
+                   class="inline-block bg-gold text-white px-12 py-4 rounded-full text-lg font-semibold hover:bg-white hover:text-navy transition shadow-xl">
+                    Jetzt Termin buchen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pakete -->
+    <section class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-4xl font-light text-navy text-center mb-16">Dein Brautzauber Paket</h2>
             
             <div class="grid md:grid-cols-2 gap-8">
                 <!-- Paket 1 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-2xl">
-                    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&h=400&fit=crop" alt="Brautstyling im Salon" class="w-full h-64 object-cover">
-                    
-                    <div class="p-8">
-                        <h2 class="text-2xl font-bold text-secondary mb-2">Brautzauber im Salon</h2>
-                        
-                        <p class="text-5xl font-bold text-primary mb-4">324 €</p>
-                        
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Probetermin inklusive</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Professionelles Brautstyling</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Make-up am Hochzeitstag</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Beratung & Vorplanung</li>
-                        </ul>
-                        
-                        <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new" class="block w-full bg-primary text-white text-center py-4 rounded-full font-bold hover:bg-secondary transition">Termin buchen</a>
+                <div class="bg-cream p-8 rounded-lg">
+                    <div class="mb-6">
+                        <img src="https://jennifer-krieg.de/wp-content/uploads/elementor/thumbs/Brautzauber-q74kv7nx3kcpo07unj402ah8yu6sp9tsypxd6qy0eg.jpg" 
+                             alt="Brautzauber im Salon" 
+                             class="w-full h-64 object-cover rounded-lg">
                     </div>
+                    
+                    <h3 class="text-2xl font-semibold text-navy mb-2">BRAUTZAUBER IM SALON</h3>
+                    
+                    <p class="text-4xl font-bold text-gold mb-4">324 €</p>
+                    
+                    <p class="text-dark/70 mb-6">Das Brautstylingpaket im Salon bereitet dich perfekt auf deinen großen Tag vor. Es beinhaltet einen Probetermin, dein persönliches Brautstyling und das Make-up.</p>
+                    
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Probetermin inklusive</li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Professionelles Brautstyling</li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Make-up am Hochzeitstag</li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Beratung & Vorplanung</li>
+                    </ul>
+                    
+                    <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new?widget_id=TuLsmgdbL1WGwy2tHqJj9hkg" 
+                       target="_blank"
+                       class="block w-full bg-gold text-white text-center py-4 rounded font-bold hover:bg-navy transition">Termin buchen</a>
                 </div>
                 
                 <!-- Paket 2 -->
-                <div class="bg-white rounded-lg overflow-hidden shadow-2xl border-4 border-primary">
-                    <div class="bg-primary text-white text-center py-2">
-                        <span class="font-bold">⭐ BELIEBT</span>
+                <div class="bg-cream p-8 rounded-lg border-4 border-gold relative">
+                    <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gold text-white px-4 py-1 rounded-full text-sm font-bold">BELIEBT</div>
+                    
+                    <div class="mb-6 mt-2">
+                        <img src="https://jennifer-krieg.de/wp-content/uploads/2021/01/Design-ohne-Titel.jpg" 
+                             alt="Mobiles Brautstyling" 
+                             class="w-full h-64 object-cover rounded-lg">
                     </div>
                     
-                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=600&h=400&fit=crop" alt="Mobiles Brautstyling" class="w-full h-60 object-cover">
+                    <h3 class="text-2xl font-semibold text-navy mb-2">BRAUTZAUBER MOBIL</h3>
                     
-                    <div class="p-8">
-                        <h2 class="text-2xl font-bold text-secondary mb-2">Brautzauber Mobil</h2>
-                        
-                        <p class="text-5xl font-bold text-primary mb-4">ab 409 €</p>
-                        
-                        <ul class="space-y-3 mb-6">
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> <strong>Anfahrt zu deinem Wunschort</strong></li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Probetermin inklusive</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Styling vor Ort</li>
-                            <li class="flex items-center"><span class="text-primary mr-2">✓</span> Make-up vor Ort</li>
-                        </ul>
-                        
-                        <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new" class="block w-full bg-primary text-white text-center py-4 rounded-full font-bold hover:bg-secondary transition">Termin buchen</a>
-                    </div>
+                    <p class="text-4xl font-bold text-gold mb-4">ab 409 €</p>
+                    
+                    <p class="text-dark/70 mb-6">Wähle das mobile Brautstylingpaket, um dich an deinem Wunschort für den besonderen Tag vorbereiten zu lassen. Das Paket umfasst einen Probetermin, dein Brautstyling, Make-up sowie die Anfahrt.</p>
+                    
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> <strong>Anfahrt zu deinem Wunschort</strong></li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Probetermin inklusive</li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Styling vor Ort</li>
+                        <li class="flex items-center"><span class="text-gold mr-2">✓</span> Make-up vor Ort</li>
+                    </ul>
+                    
+                    <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new?widget_id=TuLsmgdbL1WGwy2tHqJj9hkg" 
+                       target="_blank"
+                       class="block w-full bg-gold text-white text-center py-4 rounded font-bold hover:bg-navy transition">Termin buchen</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Ablauf -->
-    <section class="py-20 bg-white">
+    <section class="py-20 bg-cream">
         <div class="max-w-4xl mx-auto px-4">
-            <h2 class="text-4xl font-bold text-secondary text-center mb-12">So läuft dein Brautstyling ab</h2>
+            <h2 class="text-4xl font-light text-navy text-center mb-12">So läuft dein Brautstyling ab</h2>
             
             <div class="space-y-8">
-                <div class="flex items-start space-x-6">
-                    <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 text-xl font-bold">1</div>
+                <div class="bg-white p-8 rounded-lg shadow-md flex items-start space-x-6">
+                    <div class="bg-gold text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold flex-shrink-0">1</div>
                     
                     <div>
-                        <h3 class="text-xl font-bold text-secondary mb-2">Erstgespräch (ca. 4-6 Wochen vorher)</h3>
-                        
-                        <p class="text-gray-600">Wir besprechen dein Kleid, den Stil der Hochzeit und deine Vorstellungen. Bring gerne Inspirationsbilder mit!</p>
+                        <h3 class="text-xl font-semibold text-navy mb-2">Erstgespräch (ca. 4-6 Wochen vorher)</h3>
+                        <p class="text-dark/70">Wir besprechen dein Kleid, den Stil der Hochzeit und deine Vorstellungen. Bring gerne Inspirationsbilder mit!</p>
                     </div>
                 </div>
                 
-                <div class="flex items-start space-x-6">
-                    <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 text-xl font-bold">2</div>
+                <div class="bg-white p-8 rounded-lg shadow-md flex items-start space-x-6">
+                    <div class="bg-gold text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold flex-shrink-0">2</div>
                     
                     <div>
-                        <h3 class="text-xl font-bold text-secondary mb-2">Probetermin</h3>
-                        
-                        <p class="text-gray-600">Wir testen verschiedene Styles aus, bis wir den perfekten Look gefunden haben. So gibt es am Hochzeitstag keine Überraschungen.</p>
+                        <h3 class="text-xl font-semibold text-navy mb-2">Probetermin</h3>
+                        <p class="text-dark/70">Wir testen verschiedene Styles aus, bis wir den perfekten Look gefunden haben. So gibt es am Hochzeitstag keine Überraschungen.</p>
                     </div>
                 </div>
                 
-                <div class="flex items-start space-x-6">
-                    <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center flex-shrink-0 text-xl font-bold">3</div>
+                <div class="bg-white p-8 rounded-lg shadow-md flex items-start space-x-6">
+                    <div class="bg-gold text-white rounded-full w-12 h-12 flex items-center justify-center text-xl font-bold flex-shrink-0">3</div>
                     
                     <div>
-                        <h3 class="text-xl font-bold text-secondary mb-2">Dein Hochzeitstag</h3>
-                        
-                        <p class="text-gray-600">Entspanntes Styling bei dir zu Hause, im Hotel oder bei mir im Salon. Du startest entspannt in den schönsten Tag deines Lebens.</p>
+                        <h3 class="text-xl font-semibold text-navy mb-2">Dein Hochzeitstag</h3>
+                        <p class="text-dark/70">Entspanntes Styling bei dir zu Hause, im Hotel oder bei mir im Salon. Du startest entspannt in den schönsten Tag deines Lebens.</p>
                     </div>
                 </div>
             </div>
@@ -123,48 +177,80 @@
     </section>
 
     <!-- Trust -->
-    <section class="py-20 bg-cream">
+    <section class="py-20 bg-white">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-secondary mb-8">Warum Jennifer Krieg?</h2>
+            <h2 class="text-4xl font-light text-navy mb-12">Warum Jennifer Krieg?</h2>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="p-6">
                     <div class="text-4xl mb-4">💒</div>
-                    <h3 class="font-bold text-secondary mb-2">22 Jahre Erfahrung</h3>
-                    <p class="text-gray-600">Spezialisiert auf Brautstyling mit Hunderten glücklicher Bräute</p>
+                    <h3 class="font-semibold text-navy mb-2">22 Jahre Erfahrung</h3>
+                    <p class="text-dark/70 text-sm">Spezialisiert auf Brautstyling mit Hunderten glücklicher Bräute</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="p-6">
                     <div class="text-4xl mb-4">🚗</div>
-                    <h3 class="font-bold text-secondary mb-2">Mobiler Service</h3>
-                    <p class="text-gray-600">Ich komme zu dir – in Rostock, Warnemünde & Umgebung</p>
+                    <h3 class="font-semibold text-navy mb-2">Mobiler Service</h3>
+                    <p class="text-dark/70 text-sm">Ich komme zu dir – in Rostock, Warnemünde & Umgebung</p>
                 </div>
                 
-                <div class="bg-white p-6 rounded-lg shadow-md">
+                <div class="p-6">
                     <div class="text-4xl mb-4">✨</div>
-                    <h3 class="font-bold text-secondary mb-2">Probetermin inklusive</h3>
-                    <p class="text-gray-600">Keine Überraschungen – wir finden vorher den perfekten Style</p>
+                    <h3 class="font-semibold text-navy mb-2">Probetermin inklusive</h3>
+                    <p class="text-dark/70 text-sm">Keine Überraschungen – wir finden vorher den perfekten Style</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- CTA -->
-    <section class="py-20 bg-secondary">
+    <section class="py-20 bg-gold">
         <div class="max-w-4xl mx-auto px-4 text-center">
-            <h2 class="text-4xl font-bold text-white mb-6">Plane dein Brautstyling frühzeitig</h2>
+            <h2 class="text-4xl font-light text-white mb-6">Plane dein Brautstyling frühzeitig</h2>
             
-            <p class="text-xl text-white/80 mb-8">Hochzeitstermine sind schnell ausgebucht. Sichere dir jetzt deinen Wunschtermin!</p>
+            <p class="text-xl text-white/90 mb-8">Hochzeitstermine sind schnell ausgebucht. Sichere dir jetzt deinen Wunschtermin!</p>
             
-            <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new" class="inline-block bg-primary text-white px-12 py-5 rounded-full text-xl font-bold hover:bg-white hover:text-secondary transition shadow-xl">Jetzt anfragen</a>
+            <a href="https://jennifer-krieg-jk.salonized.com/widget_bookings/new?widget_id=TuLsmgdbL1WGwy2tHqJj9hkg" 
+               target="_blank"
+               class="inline-block bg-white text-navy px-12 py-5 rounded-full text-xl font-bold hover:bg-dark hover:text-white transition shadow-xl">
+                Jetzt anfragen
+            </a>
             
-            <p class="text-white/60 mt-6">📞 Direkt anrufen: 0152 54572195</p>
+            <p class="text-white/80 mt-6">📞 Direkt anrufen: 0152 54572195</p>
         </div>
     </section>
 
-    <footer class="bg-dark text-white py-8">
-        <div class="max-w-4xl mx-auto px-4 text-center">
-            <p><a href="/" class="text-primary">← Zurück zur Startseite</a></p>
+    <!-- Footer -->
+    <footer class="bg-navy text-white py-12">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <!-- Logo -->
+                <div>
+                    <img src="https://jennifer-krieg.de/wp-content/uploads/2022/06/cropped-cropped-Jennifer-Krieg-Hairdressing1500-x-1500-px.jpg" 
+                         alt="Jennifer Krieg" 
+                         class="h-24 w-auto mb-4">
+                </div>
+                
+                <!-- Info -->
+                <div>
+                    <h4 class="text-gold font-semibold mb-4">jennifer krieg</h4>
+                    <p class="text-white/70 text-sm">Wiener Platz 8<br>18069 Rostock</p>
+                    <p class="text-white/70 text-sm mt-2">0152 54572195</p>
+                </div>
+                
+                <!-- Rechtliches -->
+                <div>
+                    <h4 class="text-gold font-semibold mb-4">Rechtliches</h4>
+                    <ul class="text-white/70 text-sm space-y-2">
+                        <li><a href="/datenschutz.html" class="hover:text-gold transition">Datenschutzerklärung</a></li>
+                        <li><a href="/impressum.html" class="hover:text-gold transition">Impressum</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-white/20 pt-8 text-center text-white/50 text-sm">
+                <p>&copy; 2026 JK Hairdressing by Jennifer Krieg</p>
+            </div>
         </div>
     </footer>
 

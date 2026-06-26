@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | JK Hairdressing Rostock</title>
+    <meta name="description" content="Tipps & Trends rund um Haare, Styling & Beauty aus deinem Friseursalon in Rostock. Balayage, Brautstyling & mehr!">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#D5B781', secondary: '#0E2A3B', dark: '#04151F', cream: '#F9F5EE' },
+                    fontFamily: { serif: ['Noto Serif JP', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-serif text-dark bg-cream">
+
+    <nav class="fixed w-full z-50 bg-cream/95 backdrop-blur-sm border-b border-primary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="text-2xl font-semibold text-secondary">JK Hairdressing</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-dark hover:text-primary transition">Startseite</a>
+                    <a href="/blog/" class="text-primary font-semibold">Blog</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <header class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-bold text-secondary mb-4">Blog</h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Tipps, Trends & Insights aus deinem Friseursalon in Rostock</p>
+            </header>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <a href="/blog/balayage-rostock/">
+                        <img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=800&h=400&fit=crop" alt="Balayage" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-secondary mb-2">Balayage Rostock: Der Trend für natürliche Highlights</h2>
+                            <p class="text-gray-600 mb-4">Entdecke die französische Färbetechnik für sonnengeküsste, natürliche Highlights – perfekt für deinen Sommerlook in Rostock.</p>
+                            <span class="text-primary font-semibold">Weiterlesen →</span>
+                        </div>
+                    </a>
+                </article>
+                
+                <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+                    <a href="/blog/brautstyling-rostock/">
+                        <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=800&h=400&fit=crop" alt="Brautstyling" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold text-secondary mb-2">Brautstyling Rostock: Perfekt für deinen großen Tag</h2>
+                            <p class="text-gray-600 mb-4">Professionelles Brautstyling in Rostock & Umgebung. Mobiler Service oder im Salon – mit Probetermin.</p>
+                            <span class="text-primary font-semibold">Weiterlesen →</span>
+                        </div>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-secondary text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2026 JK Hairdressing | <a href="/" class="text-primary">Zurück zur Startseite</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

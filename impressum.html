@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impressum | JK Hairdressing</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { primary: '#D5B781', secondary: '#0E2A3B', dark: '#04151F', cream: '#F9F5EE' },
+                    fontFamily: { serif: ['Noto Serif JP', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-serif text-dark bg-cream">
+
+    <nav class="fixed w-full z-50 bg-cream/95 backdrop-blur-sm border-b border-primary/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="/" class="text-2xl font-semibold text-secondary">JK Hairdressing</a>
+                <div class="hidden md:flex space-x-8">
+                    <a href="/" class="text-dark hover:text-primary transition">Startseite</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h1 class="text-4xl font-bold text-secondary mb-10">Impressum</h1>
+            
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-xl font-bold text-secondary mb-2">Angaben gemäß § 5 TMG</h2>
+                    <p>Jennifer Krieg<br>JK Hairdressing<br>Wiener Platz 8<br>18069 Rostock</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-xl font-bold text-secondary mb-2">Kontakt</h2>
+                    <p>Telefon: +49 152 54572195<br>E-Mail: mail@jennifer-krieg.de</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-xl font-bold text-secondary mb-2">Umsatzsteuer-ID</h2>
+                    <p>Umsatzsteuer-Identifikationsnummer gemäß § 27 a Umsatzsteuergesetz: [Wird nachgereicht]</p>
+                </div>
+                
+                <div>
+                    <h2 class="text-xl font-bold text-secondary mb-2">EU-Streitschlichtung</h2>
+                    <p>Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr" class="text-primary underline" target="_blank">https://ec.europa.eu/consumers/odr</a></p>
+                </div>
+                
+                <div>
+                    <h2 class="text-xl font-bold text-secondary mb-2">Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
+                    <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-secondary text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2026 JK Hairdressing | <a href="/" class="text-primary">Zurück zur Startseite</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

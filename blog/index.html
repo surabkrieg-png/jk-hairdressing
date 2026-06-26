@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hair &amp; Beauty Blog – Jennifer Krieg Hairdressing</title>
+  <meta name="description" content="Mit meinem Hair &amp; Beauty Blog möchte ich Frauen jeden Alters dabei helfen, sich sicherer und wohler mit ihren Haaren zu fühlen.">
+  <meta property="og:title" content="Hair &amp; Beauty Blog – Jennifer Krieg Hairdressing">
+  <meta property="og:description" content="Mit meinem Hair &amp; Beauty Blog möchte ich Frauen jeden Alters dabei helfen, sich sicherer und wohler mit ihren Haaren zu fühlen.">
+  <meta property="og:url" content="https://jennifer-krieg.de/blog/">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://jennifer-krieg.de/blog/">
+  <link rel="icon" href="../images/logo.jpg" type="image/jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            jk: { cream: '#F8F5F0', gold: '#C5A575', dark: '#2C2C2C', gray: '#6B6B6B', black: '#1A1A1A' }
+          },
+          fontFamily: { serif: ['"Noto Serif JP"', 'serif'], sans: ['Roboto', 'sans-serif'] }
+        }
+      }
+    }
+  </script>
+  <style>
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.active { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body class="font-sans text-jk-dark bg-jk-cream antialiased">
+
+  <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center h-20">
+        <a href="../index.html" class="flex items-center gap-3">
+          <img src="../images/logo.jpg" alt="JK Hairdressing Logo" class="h-12 w-12 object-cover rounded-full">
+          <span class="font-serif text-xl tracking-wide text-jk-black">JK Hairdressing</span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium tracking-wide">
+          <a href="../index.html#start" class="hover:text-jk-gold transition">Start</a>
+          <a href="../index.html#aboutme" class="hover:text-jk-gold transition">About me</a>
+          <a href="../index.html#leistungen" class="hover:text-jk-gold transition">Leistungen</a>
+          <a href="../index.html#preise" class="hover:text-jk-gold transition">Preise</a>
+          <a href="../index.html#kontakt" class="hover:text-jk-gold transition">Kontakt</a>
+          <a href="index.html" class="text-jk-gold">Blog</a>
+        </div>
+        <button id="mobile-menu-btn" class="md:hidden p-2" aria-label="Menü öffnen">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="flex flex-col px-4 py-4 gap-4 text-sm font-medium">
+        <a href="../index.html#start" class="hover:text-jk-gold">Start</a>
+        <a href="../index.html#aboutme" class="hover:text-jk-gold">About me</a>
+        <a href="../index.html#leistungen" class="hover:text-jk-gold">Leistungen</a>
+        <a href="../index.html#preise" class="hover:text-jk-gold">Preise</a>
+        <a href="../index.html#kontakt" class="hover:text-jk-gold">Kontakt</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="pt-32 pb-16 md:pt-40 md:pb-20 bg-white text-center px-4">
+    <div class="max-w-3xl mx-auto">
+      <p class="text-jk-gold text-sm tracking-[0.2em] uppercase mb-2">Jennifer Krieg Hairdressing</p>
+      <h1 class="font-serif text-4xl md:text-5xl text-jk-black mb-4">Hair &amp; Beauty Blog</h1>
+      <p class="text-jk-gray text-lg leading-relaxed">
+        Mit meinem Blog möchte ich Frauen jeden Alters dabei helfen, sich sicherer und wohler mit ihren Haaren zu fühlen.
+      </p>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+    <div id="blog-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Posts werden per JavaScript eingefügt -->
+    </div>
+    <div class="mt-16 flex justify-between text-sm font-medium text-jk-gray">
+      <span>Seite 1 von 2</span>
+      <a href="page-2.html" class="text-jk-gold hover:underline">Weitere Beiträge →</a>
+    </div>
+  </main>
+
+  <footer class="bg-jk-black text-white/80 py-12 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <p class="text-white font-serif text-lg mb-2">jennifer krieg</p>
+          <p>Wiener Platz 8<br>18069 Rostock</p>
+        </div>
+        <div>
+          <p class="text-white font-medium mb-2">Navigation</p>
+          <ul class="space-y-1">
+            <li><a href="../index.html" class="hover:text-jk-gold">Startseite</a></li>
+            <li><a href="../index.html#leistungen" class="hover:text-jk-gold">Leistungen</a></li>
+            <li><a href="../index.html#preise" class="hover:text-jk-gold">Preise</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="text-white font-medium mb-2">Rechtliches</p>
+          <ul class="space-y-1">
+            <li><a href="../datenschutz.html" class="hover:text-jk-gold">Datenschutzerklärung</a></li>
+            <li><a href="../impressum.html" class="hover:text-jk-gold">Impressum</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-white/20 pt-8 text-center text-white/60">
+        &copy; 2026 Jennifer Krieg Hairdressing. Alle Rechte vorbehalten.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    fetch('posts.json')
+      .then(r => r.json())
+      .then(posts => {
+        const grid = document.getElementById('blog-grid');
+        posts.forEach((p, i) => {
+          const card = document.createElement('article');
+          card.className = 'bg-white rounded shadow overflow-hidden reveal flex flex-col';
+          const imgHtml = p.local_img
+            ? `<a href="${p.link}" target="_blank" rel="noopener"><img src="${p.local_img}" alt="${p.alt || p.title}" class="w-full h-48 object-cover hover:opacity-90 transition"></a>`
+            : '';
+          card.innerHTML = `
+            ${imgHtml}
+            <div class="p-6 flex-1 flex flex-col">
+              <h2 class="font-serif text-xl text-jk-black mb-3"><a href="${p.link}" target="_blank" rel="noopener" class="hover:text-jk-gold transition">${p.title}</a></h2>
+              <p class="text-jk-gray text-sm leading-relaxed flex-1">${p.excerpt}</p>
+              <a href="${p.link}" target="_blank" rel="noopener" class="inline-block mt-4 text-jk-gold text-sm font-medium hover:underline">Weiterlesen →</a>
+            </div>
+          `;
+          grid.appendChild(card);
+        });
+        // Reveal observer
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+      })
+      .catch(err => {
+        document.getElementById('blog-grid').innerHTML = '<p class="text-jk-gray">Blog-Beiträge konnten nicht geladen werden.</p>';
+        console.error(err);
+      });
+
+    document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>

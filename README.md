@@ -9,6 +9,9 @@ Dies ist eine statische HTML-Website, die WordPress ersetzt. Keine WordPress-Sic
 ## Technologie
 
 - **Frontend**: HTML5 + Tailwind CSS (CDN)
+- **Icons**: Inline SVG
+- **Buchung**: Salonized Widget (`salonized-loader.js`)
+- **Preise**: Salonized iframe (`jennifer-krieg-jk.salonized.com/services?layout=embed`)
 - **Hosting**: Cloudflare Pages
 - **CI/CD**: GitHub Actions
 
@@ -16,18 +19,20 @@ Dies ist eine statische HTML-Website, die WordPress ersetzt. Keine WordPress-Sic
 
 ```
 /
-├── index.html           # Startseite
-├── impressum.html       # Impressum
-├── datenschutz.html     # Datenschutzerklärung
+├── index.html              # Startseite
+├── impressum.html          # Impressum
+├── datenschutz.html        # Datenschutzerklärung
+├── salonized-loader.js     # Salonized Buchungs-Button
+├── images/                 # Lokale Bilder
 ├── blog/
-│   ├── index.html       # Blog-Übersicht
-│   ├── balayage-rostock/
-│   │   └── index.html   # SEO-optimierter Artikel
-│   └── brautstyling-rostock/
-│       └── index.html   # SEO-optimierter Artikel
-└── .github/
-    └── workflows/
-        └── deploy.yml   # Auto-Deployment
+│   ├── index.html          # Blog-Übersicht
+│   ├── posts.json          # Blog-Daten
+│   └── images/             # Blog-Bilder
+├── balayage-rostock/       # SEO Landing Page
+├── brautstyling-rostock/   # SEO Landing Page
+├── haarverdichtung-rostock/# SEO Landing Page
+└── .github/workflows/
+    └── deploy.yml          # Auto-Deployment zu Cloudflare Pages
 ```
 
 ## SEO-Keywords
@@ -35,20 +40,22 @@ Dies ist eine statische HTML-Website, die WordPress ersetzt. Keine WordPress-Sic
 - Friseur Rostock
 - Balayage Rostock
 - Brautstyling Rostock
-- Haarverlängerung Rostock
+- Haarverdichtung Rostock
 - Friseursalon Rostock
 
 ## Deployment
 
 Automatisches Deployment bei Push auf `main` Branch via GitHub Actions zu Cloudflare Pages.
 
+Benötigte GitHub Secrets:
+- `CLOUDFLARE_API_TOKEN`
+- `CLOUDFLARE_ACCOUNT_ID`
+
 ## Lokale Entwicklung
 
 ```bash
-# Einfacher HTTP-Server
-python3 -m http.server 8000
-
-# Oder Live Server VS Code Extension
+cd /path/to/repo
+python3 -m http.server 8080
 ```
 
 ## Kontakt

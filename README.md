@@ -1,17 +1,18 @@
 # JK Hairdressing - Static Website
 
-Statische Website für JK Hairdressing by Jennifer Krieg, Friseursalon in Rostock.
+Statische HTML-Website für JK Hairdressing by Jennifer Krieg, Friseursalon in Rostock.
 
 ## Über das Projekt
 
-Dies ist eine statische HTML-Website, die WordPress ersetzt. Keine WordPress-Sicherheitslücken, kein Wartungsaufwand.
+Dies ist ein 1:1 statischer Nachbau der bestehenden WordPress-Website (`jennifer-krieg.de`), um WordPress-Sicherheitslücken und Wartungsaufwand zu vermeiden.
 
 ## Technologie
 
 - **Frontend**: HTML5 + Tailwind CSS (CDN)
 - **Icons**: Inline SVG
-- **Buchung**: Salonized Widget (`salonized-loader.js`)
-- **Preise**: Salonized iframe (`jennifer-krieg-jk.salonized.com/services?layout=embed`)
+- **Buchung**: Salonized Widget
+- **Preisliste**: Salonized iframe (`jennifer-krieg-jk.salonized.com/services?layout=embed`)
+- **Bewertungen**: Salonized Reviews Mini Widget + Link zu Google-Bewertungen
 - **Hosting**: Cloudflare Pages
 - **CI/CD**: GitHub Actions
 
@@ -22,15 +23,8 @@ Dies ist eine statische HTML-Website, die WordPress ersetzt. Keine WordPress-Sic
 ├── index.html              # Startseite
 ├── impressum.html          # Impressum
 ├── datenschutz.html        # Datenschutzerklärung
-├── salonized-loader.js     # Salonized Buchungs-Button
+├── blog/index.html         # Blog-Übersicht
 ├── images/                 # Lokale Bilder
-├── blog/
-│   ├── index.html          # Blog-Übersicht
-│   ├── posts.json          # Blog-Daten
-│   └── images/             # Blog-Bilder
-├── balayage-rostock/       # SEO Landing Page
-├── brautstyling-rostock/   # SEO Landing Page
-├── haarverdichtung-rostock/# SEO Landing Page
 └── .github/workflows/
     └── deploy.yml          # Auto-Deployment zu Cloudflare Pages
 ```
@@ -54,7 +48,7 @@ Benötigte GitHub Secrets:
 ## Lokale Entwicklung
 
 ```bash
-cd /path/to/repo
+cd /root/Claude-Code-Workspace/Projekte/jennifer-krieg-website
 python3 -m http.server 8080
 ```
 

@@ -3,18 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Impressum – Jennifer Krieg Hairdressing</title>
-  <meta name="description" content="Impressum von Jennifer Krieg Hairdressing in Rostock.">
-  <link rel="icon" href="images/logo.jpg" type="image/jpeg">
+  <title>Impressum | JK Hairdressing</title>
+  <meta name="description" content="Impressum von JK Hairdressing by Jennifer Krieg in Rostock.">
+  <link rel="canonical" href="https://jennifer-krieg.de/impressum/">
+  <link rel="icon" href="images/logo-150x150.jpg" type="image/jpeg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;500;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          colors: { jk: { cream: '#F8F5F0', gold: '#C5A575', dark: '#2C2C2C', gray: '#6B6B6B', black: '#1A1A1A' } },
+          colors: {
+            jk: { cream: '#F8F5F0', gold: '#C5A575', goldLight: '#D9C4A3', dark: '#2C2C2C', gray: '#6B6B6B', rose: '#B8907A', black: '#1A1A1A' }
+          },
           fontFamily: { serif: ['"Noto Serif JP"', 'serif'], sans: ['Roboto', 'sans-serif'] }
         }
       }
@@ -22,41 +25,58 @@
   </script>
 </head>
 <body class="font-sans text-jk-dark bg-jk-cream antialiased">
-
-  <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm shadow-sm">
+  <nav class="w-full bg-white shadow-sm">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <a href="index.html" class="flex items-center gap-3">
-          <img src="images/logo.jpg" alt="JK Hairdressing Logo" class="h-12 w-12 object-cover rounded-full">
+          <img src="images/logo-150x150.jpg" alt="JK Hairdressing Logo" class="h-12 w-12 object-cover rounded-full">
           <span class="font-serif text-xl tracking-wide text-jk-black">JK Hairdressing</span>
         </a>
-        <div class="hidden md:flex items-center gap-8 text-sm font-medium">
-          <a href="index.html#start" class="hover:text-jk-gold">Start</a>
-          <a href="index.html#aboutme" class="hover:text-jk-gold">About me</a>
-          <a href="index.html#leistungen" class="hover:text-jk-gold">Leistungen</a>
-          <a href="index.html#preise" class="hover:text-jk-gold">Preise</a>
-          <a href="blog/index.html" class="hover:text-jk-gold">Blog</a>
-        </div>
+        <a href="index.html" class="text-sm font-medium hover:text-jk-gold transition">Zurück zur Startseite</a>
       </div>
     </div>
   </nav>
 
-  <main class="pt-32 pb-20 max-w-3xl mx-auto px-4">
+  <main class="max-w-4xl mx-auto px-4 py-16">
     <h1 class="font-serif text-4xl text-jk-black mb-8">Impressum</h1>
 
-    <p class="mb-4"><strong>Jennifer Krieg Hairdressing</strong></p>
-    <p class="mb-4">Wiener Platz 8<br>18069 Rostock</p>
-    <p class="mb-4">Telefon: 0152 54572195<br>E-Mail: mail@jennifer-krieg.de</p>
+    <h2 class="font-serif text-2xl text-jk-black mt-8 mb-4">Angaben gemäß § 5 TMG</h2>
+    <p class="text-jk-gray leading-relaxed mb-6">
+      Jennifer Krieg<br>
+      JK Hairdressing<br>
+      Wiener Platz 8<br>
+      18069 Rostock
+    </p>
 
-    <p class="mb-4"><strong>Vertretungsberechtigt:</strong> Jennifer Krieg</p>
-    <p class="mb-4"><strong>Umsatzsteuer-ID:</strong> wird nachgereicht</p>
+    <h2 class="font-serif text-2xl text-jk-black mt-8 mb-4">Kontakt</h2>
+    <p class="text-jk-gray leading-relaxed mb-6">
+      Telefon: <a href="tel:+4915254572195" class="text-jk-gold hover:underline">+49 152 54572195</a><br>
+      E-Mail: <a href="mailto:mail@jennifer-krieg.de" class="text-jk-gold hover:underline">mail@jennifer-krieg.de</a>
+    </p>
 
-    <p class="text-sm text-jk-gray mt-8">Hinweis: Dieses Impressum ist ein Platzhalter. Bitte durch die vollständigen und aktuellen Angaben ersetzen.</p>
+    <h2 class="font-serif text-2xl text-jk-black mt-8 mb-4">Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
+    <p class="text-jk-gray leading-relaxed mb-6">
+      Jennifer Krieg<br>
+      Wiener Platz 8<br>
+      18069 Rostock
+    </p>
+
+    <h2 class="font-serif text-2xl text-jk-black mt-8 mb-4">Streitschlichtung</h2>
+    <p class="text-jk-gray leading-relaxed mb-6">
+      Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit: <a href="https://ec.europa.eu/consumers/odr/" target="_blank" rel="noopener" class="text-jk-gold hover:underline">https://ec.europa.eu/consumers/odr/</a>.<br>
+      Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
+    </p>
+
+    <h2 class="font-serif text-2xl text-jk-black mt-8 mb-4">Haftung für Inhalte</h2>
+    <p class="text-jk-gray leading-relaxed mb-6">
+      Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+    </p>
   </main>
 
-  <footer class="bg-jk-black text-white/80 py-8 text-sm text-center">
-    <a href="index.html" class="text-jk-gold hover:underline">← Zurück zur Startseite</a>
+  <footer class="bg-jk-black text-white/70 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center text-sm">
+      <p>&copy; 2026 Jennifer Krieg | JK Hairdressing. <a href="index.html" class="hover:text-jk-gold">Zurück zur Startseite</a> | <a href="datenschutz.html" class="hover:text-jk-gold">Datenschutz</a></p>
+    </div>
   </footer>
-
 </body>
 </html>
